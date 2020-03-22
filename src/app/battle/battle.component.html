@@ -1,0 +1,10 @@
+<div class="battle-container col-sm">
+        <line-component 
+            ng-repeat="army in b.armies" 
+            units="army.units" 
+            color="army.color"
+            change-unit-num="b.changeUnitNum($event)"
+            army-index="$index"
+            total="b.getTotal(b.armies[$index].units)"
+        />
+</div>

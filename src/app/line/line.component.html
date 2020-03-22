@@ -1,0 +1,10 @@
+<div class="row">
+    <input 
+        ng-repeat="unit in l.units track by $index" 
+        ng-change="l.changeUnitNum({$event: {unitValue: unit, unitIndex: $index, armyIndex: l.armyIndex}})" 
+        ng-model='unit' 
+        class="form-control col-sm-3 trasparent" 
+        type="number"
+    />
+    <input ng-model="l.total" class="form-control col-sm-3" disabled>
+</div>
