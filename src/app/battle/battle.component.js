@@ -20,7 +20,7 @@ class BattleController {
     changeUnitNum(unit) {
         let units = this.armies[unit.armyIndex].units;
         units[unit.unitIndex] = unit.unitValue;
-        this.total = this.getTotal(units);
+        this.getTotal(units);
     }
 
     getTotal(units) {

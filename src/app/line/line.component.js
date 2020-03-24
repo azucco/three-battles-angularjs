@@ -16,7 +16,22 @@ export default function lineComponent() {
 }
 
 class LineController {
-    constructor() {
 
+    static get $inject() {
+        return ['$scope'];
+    }
+
+    constructor($scope) {
+        this.$scope = $scope;
+    }
+
+    $postLink() {
+       console.log(this.units)
+    }
+
+    parseZero(unit) {
+        console.log(unit)
+        console.log(this.$scope)
     }
 }
+//LineController.$inject = ['$element'];

@@ -1,8 +1,9 @@
-<div class="row">
+<div class="row" ng-class="l.color">
     <input 
         ng-repeat="unit in l.units track by $index" 
         ng-change="l.changeUnitNum({$event: {unitValue: unit, unitIndex: $index, armyIndex: l.armyIndex}})" 
-        ng-model='unit' 
+        ng-model='unit'
+        ng-focus='l.parseZero({unitValue: unit, unitIndex: $index})'
         class="form-control col-sm-3 trasparent" 
         type="number"
     />
